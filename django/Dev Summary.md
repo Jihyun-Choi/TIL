@@ -15,10 +15,33 @@
 
 6. 터미널에 새로 만든 가상환경이 존재하는 것을(맨앞에 (venv)적혀있음) 확인 후 `pip install django`
 
+<br/>
+<br/>
 
+### App 만들기
+1. python [manage.py](http://manage.py) startapp 앱이름
 
-### url 작성틀
+2. 기본앱의 settings.py의 INSTALLED_Apps에서 새로만든 앱이름 적기
+
+3. 새로만든 앱의 view를 작성
+
+4. 기본앱의 urls.py에서 새로운앱의url 주소 작성
+
+5. 새로만든 앱에 [urls.py](http://urls.py) 만든 후 코드작성    
+    주소, view, name(라우트에 대한 이름)           app_name작성해두면 주소작성시 좋음
+
 ```python
+#기본앱 urls.py
+
+urlpatterns = [ 
+    path('admin/', admin.site.urls),
+    path('accounts/', include('accountapp.urls')), 
+]
+```
+
+```python
+#추가앱 urls.py
+
 from django.urls import path
 from accountapp.views import hello_world
 
@@ -31,3 +54,7 @@ urlpatterns = [
 ```
 
 app_name과 urlpatterns에 name을 지정해두는 것이 좋다. 그러면 추후에 `app이름:url이름`으로 작성 시 url주소를 전부 다 치지않아도 자동적으로 라우팅해줄 수 있기 때문이다.
+
+<br/>
+<br/>
+ 
