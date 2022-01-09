@@ -21,7 +21,7 @@
 <br/>
 
 ### Rest
-1. REST란 무엇이고, RESTful하게 API를 디자인한다는 것은 무엇인지 설명하시오.
+1. [REST란 무엇이고, RESTful하게 API를 디자인한다는 것은 무엇인지 설명하시오.](https://github.com/Jihyun-Choi/TIL/blob/master/django/Dev%20Summary/REST.md)
 2. REST API는 왜 필요한가요?
 3. REST API의 장단점
 4. RESTful 웹 서비스에서 사용하는 프로토콜의 이름을 지정하십시오.

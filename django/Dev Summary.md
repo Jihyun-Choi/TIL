@@ -56,5 +56,47 @@ urlpatterns = [
 app_name과 urlpatterns에 name을 지정해두는 것이 좋다. 그러면 추후에 `app이름:url이름`으로 작성 시 url주소를 전부 다 치지않아도 자동적으로 라우팅해줄 수 있기 때문이다.
 
 <br/>
-<br/>
- 
+<br/> 
+
+### SECRET_KEY 분리하기 
+
+1. 터미널에 `pip install django-environ` 을 실행한다.
+
+2. 프로젝트에 `.env` 파일 생성하기
+
+3. 아래의 코드를 생성한 `.env` 파일에 복붙한다.  
+    
+    ```
+    DEBUG=on
+    SECRET_KEY= [따옴표 없이 SECRET_KEY 복붙하기]
+    DATABASE_URL=psql://urser:un-githubbedpassword@127.0.0.1:8458/database
+    SQLITE_URL=sqlite:///my-local-sqlite.db
+    CACHE_URL=memcache://127.0.0.1:11211,127.0.0.1:11212,127.0.0.1:11213
+    REDIS_URL=rediscache://127.0.0.1:6379/1?client_class=django_redis.client.DefaultClient&password=ungithubbed-secret
+    ```
+    
+4. 아래와 같이 settings.py에 있는 코드들을 수정한다.
+    
+    ```python
+    # settings.py 수정 전
+    import environ
+    
+    # reading .env file
+    environ.Env.read_env()
+    
+    SECRET_KEY = '제공된 랜덤값'
+    ```
+    
+    ```python
+    # settings.py 수정 후
+    import os, environ
+    
+    # reading .env file
+    environ.Env.read_env(
+        env_file= os.path.join(BASE_DIR, '.env') # BASE_DIR를 선언한 코드 아래에 이 코드가 있어야함
+    )
+    
+    SECRET_KEY = env('SECRET_KEY')
+    ```
+    
+5. `.env` 파일을 `.gitignore` 에 추가한다.
