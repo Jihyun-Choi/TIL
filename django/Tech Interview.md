@@ -22,8 +22,8 @@
 
 ### Rest
 1. [REST란 무엇이고, RESTful하게 API를 디자인한다는 것은 무엇인지 설명하시오.](https://github.com/Jihyun-Choi/TIL/blob/master/django/Dev%20Summary/REST.md)
-2. REST API는 왜 필요한가요?
-3. REST API의 장단점
+2. [REST API는 왜 필요한가요?](https://github.com/Jihyun-Choi/TIL/blob/master/django/Tech%20Interview/REST%20API.md#rest-api%EB%8A%94-%EC%99%9C-%ED%95%84%EC%9A%94%ED%95%9C%EA%B0%80%EC%9A%94)
+3. [REST API의 장단점](https://github.com/Jihyun-Choi/TIL/blob/master/django/Tech%20Interview/REST%20API.md#rest-api%EC%9D%98-%EC%9E%A5%EB%8B%A8%EC%A0%90)
 4. RESTful 웹 서비스에서 사용하는 프로토콜의 이름을 지정하십시오.
 5. RESTful 웹 서비스와 관련하여 '주소 지정'이라는 용어를 설명하십시오.
 6. RESTful 웹 서비스의 주된 기능을 설명하십시오.
