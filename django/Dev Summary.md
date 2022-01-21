@@ -18,42 +18,18 @@
 <br/>
 <br/>
 
-### App 만들기
-1. python [manage.py](http://manage.py) startapp 앱이름
+### gitignore 만들기
 
-2. 기본앱의 settings.py의 INSTALLED_Apps에서 새로만든 앱이름 적기
+1. 프로젝트에 `.gitignore` 파일 생성하기
 
-3. 새로만든 앱의 view를 작성
+2. [https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore](https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore) 복붙해서 작성하기
 
-4. 기본앱의 urls.py에서 새로운앱의url 주소 작성
+3. 추가적으로 gitignore해야하는 것들을 작성하기
 
-5. 새로만든 앱에 [urls.py](http://urls.py) 만든 후 코드작성    
-    주소, view, name(라우트에 대한 이름)           app_name작성해두면 주소작성시 좋음
+<br/> 
 
-```python
-#기본앱 urls.py
-
-urlpatterns = [ 
-    path('admin/', admin.site.urls),
-    path('accounts/', include('accountapp.urls')), 
-]
-```
-
-```python
-#추가앱 urls.py
-
-from django.urls import path
-from accountapp.views import hello_world
-
-app_name = "accountapp"
-
-urlpatterns = [
-	path('hello_world/', hell0_world, name='hello_world') 
-	# django.urls.path(route, view, kwargs=None, name=None, Pattern=)
-]
-```
-
-app_name과 urlpatterns에 name을 지정해두는 것이 좋다. 그러면 추후에 `app이름:url이름`으로 작성 시 url주소를 전부 다 치지않아도 자동적으로 라우팅해줄 수 있기 때문이다.
+### git 활성화 시키기
+파이참의 맨 위 상단의 VCS > Enable Version Control Intergration > 셀렉트박스에서 Git을 선택 > OK
 
 <br/>
 <br/> 
@@ -100,3 +76,66 @@ app_name과 urlpatterns에 name을 지정해두는 것이 좋다. 그러면 추�
     ```
     
 5. `.env` 파일을 `.gitignore` 에 추가한다.
+
+<br/>
+<br/>
+
+### git clone 하기 
+1. Get form Version Control 누르기
+
+2. 복사하고자 하는 git의 URL 넣기
+
+3. clone 누르기
+
+<br/>
+<br/>
+
+### requirements 만들기 & 설치하기
+
+pip freeze > requirements.txt
+
+본인 pip list 패키지들을 텍스트문서로
+
+pip install -r requirements.txt
+
+pip list들을 적은 requirements에 들어있는 패키지들을 설치 → 가상환경 동일하게 셋팅
+
+<br/>
+<br/>
+
+### App 만들기
+1. python [manage.py](http://manage.py) startapp 앱이름
+
+2. 기본앱의 settings.py의 INSTALLED_Apps에서 새로만든 앱이름 적기
+
+3. 새로만든 앱의 view를 작성
+
+4. 기본앱의 urls.py에서 새로운앱의url 주소 작성
+
+5. 새로만든 앱에 [urls.py](http://urls.py) 만든 후 코드작성    
+    주소, view, name(라우트에 대한 이름)           app_name작성해두면 주소작성시 좋음
+
+```python
+#기본앱 urls.py
+
+urlpatterns = [ 
+    path('admin/', admin.site.urls),
+    path('accounts/', include('accountapp.urls')), 
+]
+```
+
+```python
+#추가앱 urls.py
+
+from django.urls import path
+from accountapp.views import hello_world
+
+app_name = "accountapp"
+
+urlpatterns = [
+	path('hello_world/', hell0_world, name='hello_world') 
+	# django.urls.path(route, view, kwargs=None, name=None, Pattern=)
+]
+```
+
+app_name과 urlpatterns에 name을 지정해두는 것이 좋다. 그러면 추후에 `app이름:url이름`으로 작성 시 url주소를 전부 다 치지않아도 자동적으로 라우팅해줄 수 있기 때문이다.
