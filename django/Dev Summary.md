@@ -139,3 +139,18 @@ urlpatterns = [
 ```
 
 app_name과 urlpatterns에 name을 지정해두는 것이 좋다. 그러면 추후에 `app이름:url이름`으로 작성 시 url주소를 전부 다 치지않아도 자동적으로 라우팅해줄 수 있기 때문이다.
+
+<br/>
+<br/>
+
+### DB 연동하기
+
+1. `python manage.py makemigrations`
+
+    models.py에서 쓰는 명령어를 디비와 연동시킬 수 있는 파이썬 파일로 만들어줌
+    
+    *null은 디비에 저장할때 공백이어도 되는지 아닌지, FALSE이면 공백이면 안된다 !*
+
+2.  `python manage.py migrate`
+
+    파일만 만든다고 다 되는것이 아니다! 파일과 디비를 연동시켜줘야 된다.

@@ -2,7 +2,7 @@
 
 1. 장고 ORM의 원리를 설명해주세요
 2. MVT는 무엇인가요?   이때 템플릿이 어떻게 구성되어있는지 설명할 수 있습니까?
-3. APP 어떤 기준으로 분리하나요?
+3. [APP 어떤 기준으로 분리하나요?](https://github.com/Jihyun-Choi/TIL/blob/master/django/Tech%20Interview/Django.md#app-%EC%96%B4%EB%96%A4-%EA%B8%B0%EC%A4%80%EC%9C%BC%EB%A1%9C-%EB%B6%84%EB%A6%AC%ED%95%98%EB%82%98%EC%9A%94)
 4. django model에서의 select_related and prefetch_related 동작 방식은 무엇인가요?
 5. Django에서 Serializer 은 무엇인가요?
 6. django에서 어떨때 inner join / outer join으로 나뉘는가요?
