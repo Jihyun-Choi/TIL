@@ -40,6 +40,7 @@ ORM(Object-relational Mapping) : DB와 객체지향 프로그래밍 언어 간�
 Selected_related는 하나의 Query로 related Objects들을 불러오지만, Prefetch_related는 main query가 실행이 된 후 별도의 query가 실행이 된다. 따라서 1번 이상 쿼리가 진행되기 때문에 **가급적 selected_related**를 사용하는 것이 리소스를 줄일 수 있다.
 
 <br/>
+<br/>
 
 > **select_related** and **prefetch_related 차이**
 > 
