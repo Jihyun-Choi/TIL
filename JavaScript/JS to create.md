@@ -1,23 +1,31 @@
 # 일단 만드는 Javascript
 
 `실습으로 알아보는 Javascript`
-[로또 번호 추첨기](#[로또-번호-추첨기])
-[자소서 글자수 계산기](#[자소서-글자수-계산기])
-[미니 스타크래프트](#[미니-스타크래프트])
-[기념일 계산기](#[기념일-계산기])
+
+[로또 번호 추첨기](https://github.com/Jihyun-Choi/TIL/blob/master/JavaScript/JS%20to%20create.md#%EB%A1%9C%EB%98%90-%EB%B2%88%ED%98%B8-%EC%B6%94%EC%B2%A8%EA%B8%B0)
+
+[자소서 글자수 계산기](https://github.com/Jihyun-Choi/TIL/blob/master/JavaScript/JS%20to%20create.md#%EC%9E%90%EC%86%8C%EC%84%9C-%EA%B8%80%EC%9E%90%EC%88%98-%EA%B3%84%EC%82%B0%EA%B8%B0)
+
+[미니 스타크래프트](https://github.com/Jihyun-Choi/TIL/blob/master/JavaScript/JS%20to%20create.md#%EB%AF%B8%EB%8B%88-%EC%8A%A4%ED%83%80%ED%81%AC%EB%9E%98%ED%94%84%ED%8A%B8)
+
+[기념일 계산기](https://github.com/Jihyun-Choi/TIL/blob/master/JavaScript/JS%20to%20create.md#%EA%B8%B0%EB%85%90%EC%9D%BC-%EA%B3%84%EC%82%B0%EA%B8%B0)
 
 
 <br/>
 <br/>
 
-### Javascript
+## Javascript
 
 
 
 
+<br/>
 
-### [로또 번호 추첨기]
 ---
+
+<br/>
+
+### [로또 번호 추첨기] 
 
 JavaScript 사용 방법
 
@@ -37,7 +45,8 @@ JavaScript 사용 방법
     
     사용하고싶은 html의 코드에 `<script src='myScript.js'></script>` 코드 추가
 
----
+<br/>
+
 js는 유연한 언어이므로 코드의 끝에 ;를 붙이는 것이 아닌, 줄바꿈으로도 코드의 끝을 나타낼 수 있다. 하지만 여러줄의 코드를 줄바꿈없이 작성한다면, 해당 코드를 인식하지 못한다. 이러한 경우 코드의 끝을 나타내기위해 ;를 붙여줄 시 여러줄의 코드를 한줄로 작성하더라도 제대로 인식한다.
 
 주석의 용도
@@ -49,7 +58,7 @@ js는 유연한 언어이므로 코드의 끝에 ;를 붙이는 것이 아닌, �
 
 여러줄의 주석을 사용 시 `/**/` 을 사용해 나타낸다.
 
----
+<br/>
 
 변수를 선언할 땐 var 키워드를 사용한다.
 
@@ -57,7 +66,7 @@ js는 파이썬과 비슷하게 자료형 선언없이 변수를 선언할 수 �
 
 자료형이 무엇인지 알고싶을때는 `typeof 변수`를 사용하여 해당 변수의 자료형으로 값이 반환되므로 자료형을 알아낼 수 있다.
 
----
+<br/>
 
 ```jsx
 Math.random();  // 0이상 ~ 1미만 실수 (float) 출력
@@ -78,7 +87,7 @@ parseInt(Math.random() * 45 + 1);  // 1이상 ~ 45이하 정수(int) 출력
 </body> 
 ```
 
----
+<br/>
 
 배열을 만들 수 있으며 인덱스는 0부터 시작한다.
 
@@ -90,7 +99,7 @@ parseInt(Math.random() * 45 + 1);  // 1이상 ~ 45이하 정수(int) 출력
 </script> 
 ```
 
----
+<br/>
 
 `**DRY**`  Don’t Repeat Yourself
 
@@ -108,7 +117,7 @@ parseInt(Math.random() * 45 + 1);  // 1이상 ~ 45이하 정수(int) 출력
 </script>
 ```
 
----
+<br/>
 
 로또번호는 중복이 있으면 안됨. 이를 조건문을 사용해 해결해보자
 
@@ -129,7 +138,8 @@ parseInt(Math.random() * 45 + 1);  // 1이상 ~ 45이하 정수(int) 출력
     </script>
 </body>
 ```
----
+
+<br/>
 
 ```jsx
 배열.length // 배열의 길이를 반환
@@ -149,7 +159,7 @@ parseInt(Math.random() * 45 + 1);  // 1이상 ~ 45이하 정수(int) 출력
 </body>
 ```
 
----
+<br/>
 
 ```jsx
 배열.sort() // 배열 값 정렬
@@ -224,12 +234,14 @@ lotto.sort((a,b)=>b-a); // 내림차순 정렬
 <br/>
 
 ### [자소서 글자수 계산기]
----
+
+<br/>
+
 글 작성 시 글자수가 바뀌며 현재 글자수가 몇글자인지 알려주는 코드 작성.
 
 또한 최대글자수가 넘어가면 작성이 안되도록 코딩.
 
----
+<br/>
 
 **Document Object Model**
 
@@ -237,7 +249,7 @@ lotto.sort((a,b)=>b-a); // 내림차순 정렬
 
 JS는 DOM을 활용해 화면을 구성하는 모든것들에 접근할 수 있으며 원하는대로 바꿀 수 있다.
 
----
+<br/>
 
 JS로 DOM에 접근하여 원하는 값을 가져와보자
 
@@ -259,7 +271,7 @@ var content = document.getElementById('jasoseol').value;
 console.log(content);
 ```
 
----
+<br/>
 
 가져온 값의 글자수를 세보자!
 
@@ -268,7 +280,7 @@ var content = document.getElementById('jasoseol').value;
 console.log(content.length); // 문자열의 길이를 반환해 출력
 ```
 
----
+<br/>
 
 계산한 글자수를 웹에 출력해보자. 특정 값을 원하는 형태로 웹화면에 출력해보자.
 
@@ -287,11 +299,10 @@ console.log(content.length); // 문자열의 길이를 반환해 출력
 
 html의 count 태그로 감싸진 html을 `'(' + content.length + '/200)'`로 할당.
 
----
+<br/>
 
 함수를 사용해 긴 코드를 여러번 쓰지않고 만들자.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1d622cfa-1a9d-4dbc-a595-0085fc8a8c9e/Untitled.png)
 
 ```jsx
 <script>
@@ -303,7 +314,7 @@ html의 count 태그로 감싸진 html을 `'(' + content.length + '/200)'`로 �
 </script>
 ```
 
----
+<br/>
 
 글자를 쓸 때마다 자동으로 글자수를 세보자!
 
@@ -333,7 +344,7 @@ html의 count 태그로 감싸진 html을 `'(' + content.length + '/200)'`로 �
 
 해당 코드 위치의 html에서 이벤트가 발생시 이벤트핸들링으로 counter()함수가 실행
 
----
+<br/>
 
 특정 글자수를 넘기면 더이상 작성을 하지 못하도록 해보자.
 
@@ -355,7 +366,7 @@ html의 count 태그로 감싸진 html을 `'(' + content.length + '/200)'`로 �
     </script>
 ```
 
----
+<br/>
 
 ```jsx
 <body class='container'>
@@ -381,7 +392,8 @@ html의 count 태그로 감싸진 html을 `'(' + content.length + '/200)'`로 �
 <br/>
 
 ### [미니 스타크래프트]
----
+
+<br/>
 
 js는 돔을 제어하여 html 요소를 선택하여 값을 가져올 수 있다.
 
@@ -420,7 +432,7 @@ $(선택자).행위;
 </body>
 ```
 
----
+<br/>
 
 jQuery를 사용해 이벤트를 사용해보자!
 
@@ -465,7 +477,7 @@ $('#click').click(hello);
 </body>
 ```
 
----
+<br/>
 
 익명함수란? 이름이 없는 함수
 
@@ -491,10 +503,191 @@ $('#click').click(hello);
 </body>
 ```
 
----
-
-
 <br/>
 <br/>
 
 ### [기념일 계산기]
+
+객체(Object) 알아보기
+
+```jsx
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>객체(Object)</title>
+</head>
+<body>
+    <h1>객체(Object)</h1>
+    <script>
+        var person = {
+            name: 'jocoding',
+            sayHello: function() { console.log('hello'); }
+        }
+        console.log(person.name);
+        person.sayHello();
+    </script>
+</body>
+</html>
+```
+
+<br/>
+
+자바스크립트에서는 이미 특정 기능을 가진 객체가 제공된다.
+
+`var now = new Date();` // 현재 시각을 기준으로 Date 객체가 만들어져 변수에 담김
+
+```jsx
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Date 객체</title>
+</head>
+<body>
+    <h1>Date 객체</h1>
+    <script>
+        //1. Date 객체 생성
+        var now = new Date();
+        //2. 연도를 가져오는 메서드 .getFullYear()
+        console.log(now.getFullYear());
+        //3. 월 정보를 가져오는 메서드 .getMonth() {0: 1월, 1: 2월, ... 10: 11월, 11: 12월}
+        console.log(now.getMonth());
+        //4. 일 정보를 가져오는 메서드 .getDate()
+        console.log(now.getDate());
+        //5. 1970년 1월 1일 00:00:00을 기준으로 흐른 시간을 밀리초로 표시하는 메서드 .getTime()
+        console.log(now.getTime());
+        //6. 특정 일의 Date 객체 생성
+        var christmas = new Date('2020-12-25');
+        console.log(christmas);
+        //7. 특정 ms의 Date 객체 생성
+        var ms = new Date(1000);
+        console.log(ms);
+    </script>
+</body>
+</html>
+```
+
+<br/>
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>기념일 계산기</title>
+    <style>
+        * {
+            color: #333333;
+        }
+        p {
+            margin-bottom: 1px;
+        }
+        .photos {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #duhee {
+            width:150px;
+            height:150px;
+            object-fit:cover;
+            border-radius:50%;
+            margin-right: 30px;
+        }
+        #jisook {
+            width:150px;
+            height:150px;
+            object-fit:cover;
+            border-radius:50%;
+            margin-left: 30px;
+        }
+        #heart {
+            width:50px;
+            height:50px;
+        }
+        .gray {
+            color: #a0a0a0;
+        }
+        .special-day {
+            display: flex;
+            justify-content: space-between;
+        }
+        .title {
+            display: flex;
+            align-items: center;
+        }
+        .days-left {
+            text-align: right;
+        }
+        .date {
+            text-align: right;
+            color: #a0a0a0;
+        }
+    </style>
+</head>
+<body class="container">
+    <section class='photos'>
+        <img id='duhee' src="duhee.jpeg" alt="duhee">
+        <img id='heart' src="heart.png" alt="heart">
+        <img id='jisook' src="jisook.jpeg" alt="jisook">
+    </section>
+    <div class='container d-flex flex-column justify-content-center align-items-center mt-3'>
+        <h3>♥</h3>
+        <h3 id='love'>0일째</h3>
+        <h4 class="date">20**.*.**</h4>
+    </div>
+    <hr/>
+    <section class='special-day'>
+        <h3 class='title'>발렌타인 데이</h3>
+        <div class='date-box'>
+            <p id='valentine' class='days-left'>0일 남음</p>
+            <p class='date'>2021.2.14</p>
+        </div>
+    </section>
+    <hr/>
+    <section class='special-day'>
+        <h3 class='title'>1000일</h3>
+        <div class='date-box'>
+            <p id='thousand' class='days-left'>0일 남음</p>
+            <p id='thousand-date' class='date'>0000.00.00</p>
+        </div>
+    </section>
+    <hr/>
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+    <script>
+        var now = new Date();
+        var start = new Date('2020-06-30');
+
+        //우리 몇 일째?
+        var timeDiff = now.getTime() - start.getTime();
+        var day = Math.floor(timeDiff / (1000 * 60 * 60 * 24) + 1);
+        $('#love').text(day + '일째');
+
+        //기념일까지 남은 날짜는?
+        var valentine = new Date('2021-02-14');
+        var timeDiff2 = valentine.getTime() - now.getTime();
+        var day2 = Math.floor(timeDiff2 / (1000 * 60 * 60 * 24) + 1);
+        $('#valentine').text(day2 + '일 남음');
+
+        //천일은 언제인가?
+        var thousand = new Date(start.getTime() + 999 * (1000 * 60 * 60 * 24));
+        var thousandDate = thousand.getFullYear() + '.' + (thousand.getMonth()+1) + '.' + thousand.getDate();
+        $('#thousand-date').text(thousandDate);
+
+        //기념일까지 남은 날짜는?
+        var timeDiff3 = thousand.getTime() - now.getTime();
+        var day3 = Math.floor(timeDiff3 / (1000 * 60 * 60 * 24) + 1);
+        $('#thousand').text(day3 + '일 남음');
+    </script>
+</body>
+</html>
+
+<br/>
+
+<br/>
